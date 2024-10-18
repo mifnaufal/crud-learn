@@ -42,5 +42,11 @@ class PostController extends Controller
                     'error' => 'Some problem occoured, please try again'
                     ]);
             }
+
+            public function edit($id)
+        {
+            $post = Post::findOrFail($id)
+            return view('post.edit', compact('post'));
+        }
     }
 }
