@@ -43,10 +43,12 @@ class PostController extends Controller
                     ]);
             }
 
-            public function edit($id)
-        {
-            $post = Post::findOrFail($id)
-            return view('post.edit', compact('post'));
-        }
+           
+    }
+
+    public function edit($id)
+    {
+        $post = Post::findOrFail($id);
+        return view('post.edit', compact('post'));
     }
 }
